@@ -39,6 +39,7 @@ public class LoginPage extends BasePage {
 
 	@Step("user login with username : {0} and password : {1}")
 	public HomePage doLogin(String un, String pwd) {
+		System.out.println("login to app....");
 		elementUtil.doSendKeys(emailId, un);
 		elementUtil.doSendKeys(password, pwd);
 		elementUtil.doClick(loginButton);
