@@ -4,17 +4,26 @@
 <suite name="Hub spot Test automtion regression suite"
 	thread-count="3" parallel="tests" verbose="3">
 
-	<listeners>
+	<!-- <listeners>
 		<listener class-name="com.qa.hubspot.listeners.ExtentReportListener" />
 		<listener class-name="com.qa.hubspot.listeners.ScreenshotListener" />
 		<listener class-name="com.qa.hubspot.listeners.pdfListener" />
 		<listener class-name="com.qa.hubspot.listeners.TestAllureListener" />
  		<listener class-name="com.qa.hubspot.listeners.TesultsListener" />
 		
-	</listeners>
+	</listeners> -->
 
-	<test name="Login page Test">
+	<test name="Login page Test - FF">
 		<parameter name="browser" value="firefox" />
+
+		<classes>
+			<class name="com.qa.hubspot.tests.LoginPageTest" />
+		</classes>
+
+	</test>
+	
+	<test name="Login page Test - Chrome">
+		<parameter name="browser" value="chrome" />
 
 		<classes>
 			<class name="com.qa.hubspot.tests.LoginPageTest" />
